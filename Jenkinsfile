@@ -23,6 +23,9 @@ node
     stage('Unit Test')
     {
         echo "Unit Test"
+        // below is the call for the return value
+        def finput = "Pipeline automation";
+        samplereturn(finput)
     }
     
     stage('Delivery')
@@ -34,10 +37,18 @@ node
    
 }
 
- // below is the method/function
+ // below is the method/function implementation outside of the node space
     def returnfunction()
     {
         def value = "Calling the function";
         echo "this is how: ${value}" 
+    }
+
+    // Below is the node function
+
+    def samplereturn(string value)
+    {
+        def input = "connection the values for Jenkins file";
+        echo "${input} and ${value}"
     }
 
