@@ -30,13 +30,14 @@ node
         echo "Delivery"
         // below we are calling the function
         returnfunction()
-    }
-    
-    // below is the method/function
+    }    
+   
+}
+
+ // below is the method/function
     def returnfunction()
     {
         def value = "Calling the function";
         echo "this is how: ${value}" 
     }
-}
 
