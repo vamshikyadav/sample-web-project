@@ -1,6 +1,7 @@
 //Below is the sample Jenkins file for the build of the sample application
 
 def workspace;
+def name;
 
 node
 {
@@ -12,7 +13,8 @@ node
     
     stage('Static Code Analysis')
     {
-        echo "Static Code Analysis"
+        name = "Vamshi Krishna Yadav"
+        echo "Static Code Analysis ${name}"
     }
     stage('Build')
     {
