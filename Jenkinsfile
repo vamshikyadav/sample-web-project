@@ -46,7 +46,7 @@ node
 
     // Below is the node function to return a value
 
-    def samplereturn(string value)
+    def samplereturn(String value)
     {
         def input = "connection the values for Jenkins file";
         return input
