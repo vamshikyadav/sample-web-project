@@ -1,10 +1,10 @@
 // flightplan.js
-var plan = require('flightplan');
+import { target, remote as _remote } from 'flightplan';
 
 /**
  * Remote configuration for "production"
  */
-plan.target('production', {
+target('production', {
   host: '192.168.33.10',
   username: 'vagrant',
   password: 'vagrant',
@@ -23,7 +23,7 @@ plan.target('production', {
  * Usage:
  * > fly setup[:remote]
  */
-plan.remote('setup', function(remote) {
+_remote('setup', function(remote) {
 	remote.hostname();
 
 	remote.with('cd ' + remote.runtime.webRoot, function() {
@@ -38,7 +38,7 @@ plan.remote('setup', function(remote) {
  * Usage:
  * > fly deploy[:remote]
  */
-plan.remote('deploy', function(remote) {
+_remote('deploy', function(remote) {
 	remote.hostname();
 
 	remote.with('cd ' + remote.runtime.webRoot, function() {
@@ -69,7 +69,7 @@ plan.remote('deploy', function(remote) {
  * Usage
  * > fly rollback[:remote]
  */
-plan.remote('rollback', function(remote) {
+_remote('rollback', function(remote) {
 	remote.hostname();
 
 	remote.with('cd ' + remote.runtime.webRoot, function() {
