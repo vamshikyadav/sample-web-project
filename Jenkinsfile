@@ -24,7 +24,7 @@ node
     {
         echo "Unit Test"
         // below is the call for the return value
-        def finput = samplereturn(finput);
+        def finput = samplereturn(finput)
         echo "${finput}"
     }
     
