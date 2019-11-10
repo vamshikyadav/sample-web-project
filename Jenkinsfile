@@ -24,8 +24,8 @@ node
     {
         echo "Unit Test"
         // below is the call for the return value
-        def finput = "Pipeline automation";
-        samplereturn(finput)
+        def finput = samplereturn(finput);
+        echo "${finput}"
     }
     
     stage('Delivery')
@@ -44,11 +44,11 @@ node
         echo "this is how: ${value}" 
     }
 
-    // Below is the node function
+    // Below is the node function to return a value
 
     def samplereturn(string value)
     {
         def input = "connection the values for Jenkins file";
-        echo "${input} and ${value}"
+        return input
     }
 
