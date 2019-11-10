@@ -24,7 +24,9 @@ node
     {
         echo "Unit Test"
         // below is the call for the return value
-        def finput = samplereturn(finput)
+
+        def value = "Vamshi"
+        def finput = samplereturn(value)
         echo "${finput}"
     }
     
@@ -48,7 +50,7 @@ node
 
     def samplereturn(String value)
     {
-        def input = "connection the values for Jenkins file";
+        def input = "connection the values for Jenkins file: ${value} ";
         return input
     }
 
